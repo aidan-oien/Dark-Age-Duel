@@ -13,15 +13,23 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_pressed("p1_left"):
 		pos = move_and_slide(Vector2(-400,0))
+	
 	if Input.is_action_pressed("p1_right"):
 		pos = move_and_slide(Vector2(400,0))
+	
 #	if Input.is_action_just_pressed("p1_up") and can_jump and jump_num != 0:
 	if Input.is_action_just_pressed("p1_up") and can_jump:
 		can_jump = false
 		jump_num -= 1
 		vel.y = -700
+	
 	if Input.is_action_just_released("p1_up"):
 		can_jump = true
+	
+	#Fast Fall
+	if !(is_on_floor()):
+		if Input.is_action_just_pressed("p1_down"):
+			vel.y = 700
 
 	#Gravity
 	vel.y += gravity * delta
