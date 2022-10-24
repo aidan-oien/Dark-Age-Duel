@@ -21,9 +21,6 @@ func _physics_process(delta: float) -> void:
 		k_sign -= -knockback_recovery * k_sign
 
 	# Gravity
-	vel.y += gravity * delta
+	vel.y += gravity * get_physics_process_delta_time()
 	if (vel.y > max_speed.y):
 		vel.y = max_speed.y
-		
-#	e_vel = move_and_slide(e_vel)
-	

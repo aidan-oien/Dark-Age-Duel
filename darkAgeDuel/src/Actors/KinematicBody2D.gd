@@ -16,10 +16,12 @@ func _physics_process(delta: float) -> void:
 		jumps_left -= 1
 		
 	var total_vel = vel + k_vel
-	total_vel = move_and_slide(total_vel, FLOOR_NORMAL)
-	if (is_on_floor()):
-		jumps_left = jump_num
 	
+	total_vel = move_and_slide(total_vel, FLOOR_NORMAL)
+	
+	if (is_on_floor()):
+		vel.y = 1
+		jumps_left = jump_num
 	print(is_on_floor())
 
 func get_direction() -> Vector2:
