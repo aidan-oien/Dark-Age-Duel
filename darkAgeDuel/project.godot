@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="Dark Age Duel"
 config/icon="res://icon.png"
 
+[global]
+
+layer=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
@@ -59,6 +63,8 @@ p1_down={
 2d_physics/layer_1="P1"
 2d_physics/layer_2="P2"
 2d_physics/layer_3="World"
+2d_physics/layer_4="Hitbox"
+2d_physics/layer_5="Blastzone"
 
 [physics]
 
