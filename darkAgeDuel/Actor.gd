@@ -8,7 +8,6 @@ export var max_speed: = Vector2(1000,550)
 export var max_knockback_speed: = Vector2(1000,1000)
 export var knockback_recovery: = 150 
 
-
 var percentage:	= 0
 var vel:		= Vector2.ZERO
 var k_vel:		= Vector2.ZERO
