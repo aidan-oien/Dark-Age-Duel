@@ -1,0 +1,10 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Adventurer.ttf"
+
+[resource]
+size = 85
+outline_size = 1
+outline_color = Color( 0.564706, 0.0745098, 0.317647, 1 )
+font_data = SubResource( 1 )
